@@ -1,19 +1,77 @@
 <!DOCTYPE html>
-<html>
+<html lang="ko">
   <head>
     <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>{{ page.title }} | {{ site.title }}</title>
-    <link rel="stylesheet" href="{{ '/assets/main.css' | relative_url }}">
+    <style>
+      body {
+        font-family: 'Segoe UI', 'Helvetica Neue', sans-serif;
+        margin: 0;
+        padding: 0;
+        background: #fdfdfd;
+        color: #333;
+        line-height: 1.6;
+      }
+      header {
+        background-color: #4a90e2;
+        color: white;
+        padding: 1.5em 1em;
+        text-align: center;
+      }
+      header h1 {
+        margin: 0;
+        font-size: 1.8em;
+      }
+      main {
+        max-width: 720px;
+        margin: 2em auto;
+        padding: 0 1.2em;
+      }
+      footer {
+        margin-top: 4em;
+        padding: 1em;
+        background: #eee;
+        color: #666;
+        text-align: center;
+        font-size: 0.9em;
+      }
+      a {
+        color: #4a90e2;
+        text-decoration: none;
+      }
+      a:hover {
+        text-decoration: underline;
+      }
+      code {
+        background: #f0f0f0;
+        padding: 0.2em 0.4em;
+        border-radius: 4px;
+        font-family: monospace;
+      }
+      @media (max-width: 600px) {
+        main {
+          padding: 0 1em;
+        }
+        header h1 {
+          font-size: 1.4em;
+        }
+      }
+    </style>
   </head>
   <body>
-    <main class="container">
+    <header>
+      <h1>{{ site.title }}</h1>
+    </header>
+
+    <main>
       {{ content }}
     </main>
 
-    <footer style="margin-top: 3em; padding: 1em 0; border-top: 1px solid #ccc; font-size: 0.9em; text-align: center;">
-      ⓒ {{ site.time | date: '%Y' }} 정신기.  
-      이 페이지의 모든 내용은  
-      <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.ko" target="_blank" rel="noopener">CC BY-NC-SA 4.0</a> 라이선스를 따릅니다.
+    <footer>
+      ⓒ {{ site.time | date: '%Y' }} 정신기  
+      · <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.ko" target="_blank">CC BY-NC-SA 4.0</a>
+      라이선스를 따릅니다.
     </footer>
   </body>
 </html>
