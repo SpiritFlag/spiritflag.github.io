@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>{{ page.title }} | {{ site.title }}</title>
+    <link rel="stylesheet" href="{{ '/assets/main.css' | relative_url }}">
+  </head>
+  <body>
+    <main class="container">
+      {{ content }}
+    </main>
+
+    <footer style="margin-top: 3em; padding: 1em 0; border-top: 1px solid #ccc; font-size: 0.9em; text-align: center;">
+      ⓒ {{ site.time | date: '%Y' }} 정신기.  
+      이 페이지의 모든 내용은  
+      <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.ko" target="_blank" rel="noopener">CC BY-NC-SA 4.0</a> 라이선스를 따릅니다.
+    </footer>
+  </body>
+</html>
